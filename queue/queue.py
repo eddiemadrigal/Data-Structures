@@ -26,16 +26,12 @@ class Queue:
 
     # to add an element from the rear end of the queue
     def enqueue(self, item):
-        self.items.insert(0, item)
+        self.items.insert(0, item) # insert item at index 0
 
     # to pop an element from the front end of the queue
-    def dequeue(self):
-        if self.isEmpty():
-            return None       # queue underflow
+    def dequeue(self, myItem=None):
+        if myItem != None:
+            self.items.remove(myItem)
         else:
-            self.queue.pop(0)
-            self.size -= 1
-            if self.size == 0:
-                self.front = self.rear = 0
-            else:
-                self.rear = self.size - 1
+            self.items.pop()
+
