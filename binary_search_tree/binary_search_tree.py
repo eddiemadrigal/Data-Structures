@@ -41,12 +41,12 @@ class BSTNode:
             
 
     # Return the maximum value found in the tree
-    def get_max(self):
-        if self.value < self.right:
-            self.value = self.right
-            return self.right.get_max(self.value)
-        else:
-            return self.value
+    def get_max(self):                              # get_max function definition
+        if self.value < self.right:                 # if self.value is less than the right child tree node
+            self.value = self.right                 # set the self.value to check for equal the right child tree node
+            return self.right.get_max(self.value)   # re-run the function, only this time, start with the current self.value
+        else:                                       # there is no right value
+            return self.value                       # return the self.value (the self.value is the max value by default)
         
 
     # Call the function `fn` on the value of each node
