@@ -48,10 +48,9 @@ class BSTNode:
         else:                                       # there is no right value
             return self.value                       # return the self.value (the self.value is the max value by default)
         
-
     # Call the function `fn` on the value of each node
-    def for_each(self, fn):
-        pass
+    def for_each(self, fn):                         # for_each node found, run a function called fn on the value i.e., fn(self.value)
+        fn(self.value)                              # fn(self.value) is run on each node's value 
 
     # Part 2 -----------------------
 
